@@ -71,8 +71,8 @@ footer {
 
 .project {
     display: flex;
-    align-items: center;
-    justify-content: center; /* Horizontally center align the project */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
     background: rgba(255, 255, 255, 0.1);
     padding: 20px; /* Adjust padding as needed */
     margin-bottom: 20px;
@@ -90,8 +90,8 @@ footer {
 }
 
 .project-image {
-
     width: 100px; /* Set the width of the image */
+    margin-bottom: 20px;
 }
 
 .project-image img {
@@ -100,7 +100,6 @@ footer {
 }
 
 .project-details {
-    flex: 1; /* Grow to fill available space */
     text-align: center; /* Center-align the text */
 }
 
@@ -126,10 +125,60 @@ a {
 }
 
 .icon-link img {
-    width: 40px; /* Adjust icon size as needed */
+    max-width: 100%;
+    width: 100px; /* Adjust icon size as needed */
     height: auto;
 }
 
+
+.about-container {
+    position: relative;
+    width: 85%; /* Adjust the width as needed */
+    height: 300%;
+    margin: auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #252B37, #151823);
+    border-radius: 10px;
+    animation: animateBorder 10s ease infinite;
+}
+
+@keyframes animateBorder {
+    0% {
+        box-shadow: 0 0 10px 5px #0fffc1;
+    }
+    50% {
+        box-shadow: 0 0 10px 5px #7e0fff;
+    }
+    100% {
+        box-shadow: 0 0 10px 5px #0fffc1;
+    }
+}
+
+.with-animation {
+    position: relative;
+}
+
+.with-animation .about-content {
+    animation: animateGlow 10s ease infinite;
+}
+
+@keyframes animateGlow {
+    0% {
+        filter: blur(5vw);
+        background: linear-gradient(270deg, #0fffc1, #7e0fff);
+        background-size: 200% 200%;
+    }
+    50% {
+        filter: blur(5vw);
+        background: linear-gradient(270deg, #7e0fff, #0fffc1);
+        background-size: 200% 200%;
+    }
+    100% {
+        filter: blur(5vw);
+        background: linear-gradient(270deg, #0fffc1, #7e0fff);
+        background-size: 200% 200%;
+    }
+}
 
 .about-content {
     display: flex;
@@ -137,11 +186,17 @@ a {
 }
 
 .about-image {
-    margin-right: 20px; /* Adjust spacing between image and text */
+    flex: 0 0 auto;
+    margin-right: 20px; /* Adjust the margin as needed */
 }
 
-.about-image img {
-    max-width: 100%; /* Ensure the image does not exceed its container */
+.about-text {
+    flex: 1;
+}
+
+
+.profile-image {
+    width: 800px; /* Adjust the width as needed */
     height: auto;
 }
 
