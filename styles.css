@@ -70,8 +70,11 @@ footer {
 }
 
 .project {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Horizontally center align the project */
     background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
+    padding: 20px; /* Adjust padding as needed */
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -86,15 +89,8 @@ footer {
     margin-top: 0;
 }
 
-
-.project {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
 .project-image {
-    margin-right: -150px; /* Adjust spacing between image and project details */
+
     width: 100px; /* Set the width of the image */
 }
 
