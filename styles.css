@@ -86,6 +86,29 @@ footer {
     margin-top: 0;
 }
 
+
+.project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project-image {
+    margin-right: -150px; /* Adjust spacing between image and project details */
+    width: 100px; /* Set the width of the image */
+}
+
+.project-image img {
+    max-width: 100%; /* Ensure the image does not exceed its container */
+    height: auto;
+}
+
+.project-details {
+    flex: 1; /* Grow to fill available space */
+    text-align: center; /* Center-align the text */
+}
+
+
 a {
     color: #fff;
     text-decoration: none;
